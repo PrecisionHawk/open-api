@@ -39,29 +39,29 @@ Configuration for the open-api gem is performed using an `open_api.rb` initializ
 
 ``` ruby
 OpenApi.configure do |config|
-&
+
   # Default base path(s), used to scan Rails routes for API endpoints.
   config.base_paths = ['/widget-api/v1']
-&
+
   # General information about your API.
   config.info = {
       title: 'Acme Widget API',
       description: "Documentation of the Acme's Widget API service",
       version: '1.0.0',
       terms_of_service: 'https://www.acme.com/widget-api/terms_of_service',
-&
+
       contact: {
           name: 'Acme Corporation API Team',
           url: 'http://www.acme.com/widget-api',
           email: 'widget-api-support@acme.com'
       },
-&
+
       license: {
           name: 'Apache 2.0',
           url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
       }
   }
-&
+
   # Default output file path for your generated Open API JSON document.
   config.output_file_path = Rails.root.join('apidoc', 'api-docs.json')
 end
