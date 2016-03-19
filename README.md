@@ -1,6 +1,6 @@
 # open-api
 
-**A flexible, inline[OpenAPI](https://github.com/OAI/OpenAPI-Specification)documentation solution
+**A flexible, inline [OpenAPI](https://github.com/OAI/OpenAPI-Specification) documentation solution
 for your Rails-based REST API.**
 
 [OpenAPI](https://github.com/OAI/OpenAPI-Specification) (formerly Swagger) is a popular,
