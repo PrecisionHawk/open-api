@@ -115,7 +115,11 @@ module OpenApi
               required_attrs << name.to_sym if property.delete(:required)
             end
             unless property.blank? || property[:type].respond_to?(:to_sym)
-              property = expand_nested_object_metadata(property)
+              if property.keys.length == 1 && property.keys.first.to_sym == :'$ref'
+                property = property.merge(type: :object)
+              else
+                property = expand_nested_object_metadata(property)
+              end
             end
           else
             api_type, api_format = OpenApi::Utils.open_api_type_and_format(property)
