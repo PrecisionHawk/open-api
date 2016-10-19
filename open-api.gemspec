@@ -3,7 +3,7 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
   s.name = 'open-api'
-  s.version = '0.8.3'
+  s.version = '0.8.2'
   s.summary = 'Inline Openi API documentation for Ruby on Rails'
   s.description = 'Provides the ability to specify Open API documentation inline within the ' \
       'source code of your Ruby on Rails project, utilizing a rake task to generate / maintain ' \
