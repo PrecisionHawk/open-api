@@ -90,8 +90,9 @@ module OpenApi
         end
 
         def expand_nested_object_metadata(metadata)
-          unless metadata[:type].respond_to?(:to_sym) && metadata[:type].to_sym == :object
-            metadata = { type: :object, properties: metadata }
+          if metadata.include?(:'$ref')
+            return metadata.merge(type: :object) if metadata.size == 1
+            return metadata if metadata[:type] == :object
           end
           required_attrs = (metadata[:required] || []).map(&:to_sym)
           if (properties = metadata[:properties]).is_a?(Hash) && properties.present?
