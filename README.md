@@ -3,27 +3,21 @@
 **A flexible, inline [OpenAPI](https://github.com/OAI/OpenAPI-Specification) documentation solution
 for your Rails-based REST API.**
 
-[OpenAPI](https://github.com/OAI/OpenAPI-Specification) (formerly Swagger) is a popular,
-JSON-based, language-agnostic standard for documenting a REST API.  It's quickly becoming the
-industry-leading appraoch for describing REST API's of all shapes and sizes.
+[OpenAPI](https://github.com/OAI/OpenAPI-Specification) (formerly Swagger) is a JSON-based,
+language-agnostic standard for documenting a REST API.  It's quickly becoming the standard for
+describing REST API's of all shapes and sizes.
 
-However, maintaining your own lengthy, stand-alone JSON documentation alongside your Rails API
-source code is tedious and error-prone process to say the least.  Here's why using the open-api gem
-is better:
+But maintaining your own stand-alone JSON documentation alongside your Rails API source code is a
+tedious and error-prone process.  Here's why using the open-api gem is better:
 
-+ The open-api gem merges documentation details you provide with API metadata supplied by the
-  Rails framework itself, reducing your documentation effort and helping to maintain the accuracy
-  of your documentation over time.
-+ Your API documentation details live inline right alongside your API source code.  As your API
++ Documentation details you provide are merged with information automatically extracted from Rails,
+  minimizing documentation effort and helping to ensure accuracy of your documentation over time.
++ Your API documentation metadata live inline right alongside your API source code.  As your API
   changes, locating and updating documentation affected by those changes becomes a far easier task.
 + Metadata inheritance and intelligent merging rules miminize the need to document anything more
-  than once, further reducing the development and maintenance burden associated with your API
-  documentation.
-+ Metadata that's not directly interpreted by open-api is generally passed through to the output
-  JSON intact.  As the OpenAPI standard evolves, you won't be limited to using OpenAPI features the
-  gem was explicitly written to manage.
-
-## Table of Contents
+  than once, further reducing the burden associated with maintaining your API documentation.
++ Metadata not interpreted by open-api is passed through to the output JSON intact.  As OpenAPI
+  evolves, you won't be limited to features the gem was explicitly written to manage.
 
 ## Installation
 
@@ -72,6 +66,9 @@ the[OpenAPI specification](https://github.com/OAI/OpenAPI-Specification/blob/mas
 
 
 ## Describing Endpoints
+
+
+
 
 ### Controller-Level Metadata
 

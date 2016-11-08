@@ -1,0 +1,1147 @@
+{
+  "swagger": "2.0",
+  "schemes": [
+    "http"
+  ],
+  "info": {
+    "title": "OpenAPI Book Store Public API",
+    "description": "OpenAPI Book Store Public REST API",
+    "version": "1.0.0",
+    "termsOfService": "https://www.openapibookstore.com/terms_of_service",
+    "contact": {
+      "name": "Open API Book Store Support Team",
+      "url": "http://www.openapibookstore.com",
+      "email": "support@openapibookstore.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags": [
+    {
+      "name": "Authors",
+      "description": "Comprehensive list of available authors"
+    },
+    {
+      "name": "Books",
+      "description": "Comprehensive list of available books"
+    },
+    {
+      "name": "Genres",
+      "description": "Comprehensive list of available genres"
+    },
+    {
+      "name": "Orders",
+      "description": "Comprehensive list of available orders"
+    },
+    {
+      "name": "Users",
+      "description": "Comprehensive list of available users"
+    }
+  ],
+  "paths": {
+    "/authors.{format}": {
+      "get": {
+        "tags": [
+          "Authors"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve list of available authors",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Authors"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Create a new author",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    },
+    "/authors/:author_id.{format}": {
+      "get": {
+        "tags": [
+          "Authors"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve details for a specific author",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Authors"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing author",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Authors"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing author",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Authors"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Delete an existing author",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    },
+    "/books.{format}": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve list of available books",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Books"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Create a new book",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    },
+    "/books/:book_id.{format}": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve details for a specific book",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Books"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing book",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Books"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing book",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Books"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Delete an existing book",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    },
+    "/genres.{format}": {
+      "get": {
+        "tags": [
+          "Genres"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve list of available genres",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Genres"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Create a new genre",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    },
+    "/genres/:genre_id.{format}": {
+      "get": {
+        "tags": [
+          "Genres"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve details for a specific genre",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Genres"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing genre",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Genres"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing genre",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Genres"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Delete an existing genre",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    },
+    "/orders.{format}": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve list of available orders",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Create a new order",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    },
+    "/orders/:order_id.{format}": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve details for a specific order",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing order",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing order",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Delete an existing order",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    },
+    "/users.{format}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve list of available users",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Create a new user",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    },
+    "/users/:user_id.{format}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Retrieve details for a specific user",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing user",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Update an existing user",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful"
+          },
+          "400": {
+            "description": "Not found"
+          },
+          "401": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "Not authorized (typically missing / invalid access token)"
+          }
+        },
+        "description": "Delete an existing user",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Authorization header (format: \"Bearer &lt;access token&gt;\")",
+            "required": false
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "type": "string",
+            "description": "OAuth 2 access token query parameter",
+            "required": false
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+  }
+}
