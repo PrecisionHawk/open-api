@@ -4,6 +4,7 @@ require 'open-api/generator.rb'
 require 'open-api/objects.rb'
 require 'open-api/tags.rb'
 require 'open-api/utils.rb'
+require 'open-api/railtie'
 
 module OpenApi
   class << self
