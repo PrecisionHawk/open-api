@@ -127,6 +127,7 @@ module OpenApi
 
       def find_common_base_path(base_paths)
         return nil if base_paths.blank?
+        base_paths = base_paths.keys if base_paths.is_a?(Hash)
         split_paths = base_paths.map do |base_path|
           base_path.split('/').reject(&:blank?)
         end
