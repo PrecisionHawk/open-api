@@ -10,39 +10,62 @@ module Api
           }
       )
 
+      USER_PAYLOAD = {
+          id: :integer,
+          firstName: :string,
+          lastName: :string,
+          email: :string,
+          last_login_at: :dateTime,
+          createdAt: :dateTime,
+          updatedAt: :dateTime
+      }.freeze
+      open_api_object :user_payload, USER_PAYLOAD
+
+      open_api_object :user_object_response, COMMON_RESPONSE_STATUS.merge(user: USER_PAYLOAD)
+      open_api_object :user_list_response, COMMON_RESPONSE_STATUS.merge(
+          users: { type: :array, items: { '$ref' => :user_payload }, required: true }
+      ).merge(COMMON_PAGINATION_STATUS)
+
       # GET /api/v1/users endpoint OpenAPI doc metadata and implementation
-      open_api_action :index,
-          description: 'Retrieve list of available users'
+      open_api_action :index, response: :user_object_response,
+          description: 'Retrieve list of available users',
+          responses: { 200 => { schema: :user_list_response } }
       def index
-        render_collection collection_query, base_api_options
+        fail NotImplementedError
       end
 
       # GET /api/v1/users/:user_id endpoint OpenAPI doc metadata and implementation
       open_api_action :show,
-          description: 'Retrieve details for a specific user'
+          description: 'Retrieve details for a specific user',
+          responses: { 200 => { schema: :user_object_response } }
       def show
-        render_object object_query.first, base_api_options
+        fail NotImplementedError
       end
 
       # POST /api/v1/users endpoint OpenAPI doc metadata and implementation
       open_api_action :create,
-          description: 'Create a new user'
+          description: 'Create a new user',
+          body: { description: 'Payload', schema: :user_payload },
+          responses: { 200 => { schema: :user_object_response } }
       def create
-        do_create base_api_options
+        fail NotImplementedError
       end
 
       # PATCH/PUT api/v1/users/:user_id endpoint OpenAPI doc metadata and implementation
       open_api_action :update,
-          description: 'Update an existing user'
+          description: 'Update an existing user',
+          body: { description: 'Payload', schema: :user_payload },
+          responses: { 200 => { schema: :user_object_response } }
       def update
-        do_update object_query, base_api_options
+        fail NotImplementedError
       end
 
       # DELETE /api/v1/users/:user_id endpoint OpenAPI doc metadata and implementation
       open_api_action :destroy,
-          description: 'Delete an existing user'
+          description: 'Delete an existing user',
+          responses: { 200 => { schema: :user_object_response } }
       def destroy
-        do_destroy object_query, base_api_options
+        fail NotImplementedError
       end
     end
   end

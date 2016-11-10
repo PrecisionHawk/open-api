@@ -3,6 +3,19 @@ module Api
     class BaseController < ActionController::Base
       include OpenApi::Controller
 
+      COMMON_RESPONSE_STATUS = {
+          successful: :boolean,
+          status: :string,
+          statusCode: :integer
+      }.freeze
+
+      COMMON_PAGINATION_STATUS = {
+          count: :integer,
+          page: :integer,
+          pageCount: :integer,
+          pageSize: :integer
+      }
+
       # OpenAPI documentation metadata shared by all endpoints, including common query string
       #  parameters, HTTP headers, and HTTP response codes.
       open_api_controller(
@@ -29,6 +42,7 @@ module Api
       )
 
       # OpenAPI documentation for common API endpoint path parameters
+      open_api_path_param :author_id, description: 'Author identifier'
       open_api_path_param :book_id, description: 'Book identifier'
       open_api_path_param :genre_id, description: 'Genre identifier'
       open_api_path_param :order_id, description: 'Order identifier'

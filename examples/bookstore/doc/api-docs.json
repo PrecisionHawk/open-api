@@ -21,15 +21,15 @@
   "tags": [
     {
       "name": "Authors",
-      "description": "Comprehensive list of available authors"
+      "description": "View and manage book authors"
     },
     {
       "name": "Books",
-      "description": "Comprehensive list of available books"
+      "description": "View and manage books"
     },
     {
       "name": "Genres",
-      "description": "Comprehensive list of available genres"
+      "description": "View and manage genre genres"
     },
     {
       "name": "Orders",
@@ -48,7 +48,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/author_list_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -60,6 +63,7 @@
             "description": "Not authorized (typically missing / invalid access token)"
           }
         },
+        "response": "author_object_response",
         "description": "Retrieve list of available authors",
         "parameters": [
           {
@@ -84,7 +88,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/author_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -111,6 +118,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/author_payload"
+            }
           }
         ]
       }
@@ -122,7 +137,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/author_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -158,7 +176,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/author_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -185,6 +206,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/author_payload"
+            }
           }
         ]
       },
@@ -194,7 +223,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/author_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -221,6 +253,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/author_payload"
+            }
           }
         ]
       },
@@ -230,7 +270,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/author_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -268,7 +311,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/book_list_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -280,6 +326,7 @@
             "description": "Not authorized (typically missing / invalid access token)"
           }
         },
+        "response": "book_object_response",
         "description": "Retrieve list of available books",
         "parameters": [
           {
@@ -304,7 +351,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/book_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -331,6 +381,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/book_payload"
+            }
           }
         ]
       }
@@ -342,7 +400,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/book_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -378,7 +439,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/book_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -405,6 +469,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/book_payload"
+            }
           }
         ]
       },
@@ -414,7 +486,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/book_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -441,6 +516,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/book_payload"
+            }
           }
         ]
       },
@@ -450,7 +533,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/book_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -488,7 +574,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/genre_list_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -500,6 +589,7 @@
             "description": "Not authorized (typically missing / invalid access token)"
           }
         },
+        "response": "genre_object_response",
         "description": "Retrieve list of available genres",
         "parameters": [
           {
@@ -524,7 +614,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/genre_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -551,6 +644,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/genre_payload"
+            }
           }
         ]
       }
@@ -562,7 +663,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/genre_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -598,7 +702,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/genre_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -625,6 +732,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/genre_payload"
+            }
           }
         ]
       },
@@ -634,7 +749,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/genre_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -661,6 +779,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/genre_payload"
+            }
           }
         ]
       },
@@ -670,7 +796,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/genre_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -708,7 +837,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/order_list_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -720,6 +852,7 @@
             "description": "Not authorized (typically missing / invalid access token)"
           }
         },
+        "response": "order_object_response",
         "description": "Retrieve list of available orders",
         "parameters": [
           {
@@ -744,7 +877,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/order_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -771,6 +907,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/order_payload"
+            }
           }
         ]
       }
@@ -782,7 +926,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/order_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -818,7 +965,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/order_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -845,6 +995,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/order_payload"
+            }
           }
         ]
       },
@@ -854,7 +1012,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/order_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -881,6 +1042,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/order_payload"
+            }
           }
         ]
       },
@@ -890,7 +1059,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/order_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -928,7 +1100,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/user_list_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -940,6 +1115,7 @@
             "description": "Not authorized (typically missing / invalid access token)"
           }
         },
+        "response": "user_object_response",
         "description": "Retrieve list of available users",
         "parameters": [
           {
@@ -964,7 +1140,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/user_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -991,6 +1170,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/user_payload"
+            }
           }
         ]
       }
@@ -1002,7 +1189,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/user_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -1038,7 +1228,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/user_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -1065,6 +1258,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/user_payload"
+            }
           }
         ]
       },
@@ -1074,7 +1275,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/user_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -1101,6 +1305,14 @@
             "type": "string",
             "description": "OAuth 2 access token query parameter",
             "required": false
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Payload",
+            "schema": {
+              "$ref": "#/definitions/user_payload"
+            }
           }
         ]
       },
@@ -1110,7 +1322,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Successful",
+            "schema": {
+              "$ref": "#/definitions/user_object_response"
+            }
           },
           "400": {
             "description": "Not found"
@@ -1143,5 +1358,883 @@
     }
   },
   "definitions": {
+    "author_payload": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "primaryGenre": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name"
+          ]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "displayName",
+        "firstName",
+        "lastName",
+        "primaryGenre",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "author_list_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/author_payload"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "authors",
+        "count",
+        "page",
+        "pageCount",
+        "pageSize"
+      ]
+    },
+    "author_object_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "author": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "displayName": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "primaryGenre": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updatedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": [
+            "id",
+            "displayName",
+            "firstName",
+            "lastName",
+            "primaryGenre",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "author"
+      ]
+    },
+    "book_author_payload": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "displayName",
+        "firstName",
+        "lastName"
+      ]
+    },
+    "book_payload": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "isbn": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number",
+          "format": "float"
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/book_author_payload"
+          }
+        },
+        "primaryGenre": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name"
+          ]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "isbn",
+        "price",
+        "authors",
+        "primaryGenre",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "book_list_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "books": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/book_payload"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "books",
+        "count",
+        "page",
+        "pageCount",
+        "pageSize"
+      ]
+    },
+    "book_object_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "book": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "isbn": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number",
+              "format": "float"
+            },
+            "authors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/book_author_payload"
+              }
+            },
+            "primaryGenre": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updatedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "description",
+            "isbn",
+            "price",
+            "authors",
+            "primaryGenre",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "book"
+      ]
+    },
+    "genre_payload": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "genre_list_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/genre_payload"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "genres",
+        "count",
+        "page",
+        "pageCount",
+        "pageSize"
+      ]
+    },
+    "genre_object_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "genre": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "name": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updatedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "genre"
+      ]
+    },
+    "order_item_payload": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sku": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "price": {
+          "type": "number",
+          "format": "float"
+        },
+        "tax": {
+          "type": "number",
+          "format": "float"
+        },
+        "shipping": {
+          "type": "number",
+          "format": "float"
+        },
+        "total": {
+          "type": "number",
+          "format": "float"
+        }
+      },
+      "required": [
+        "id",
+        "productId",
+        "sku",
+        "quantity",
+        "price",
+        "tax",
+        "shipping",
+        "total"
+      ]
+    },
+    "order_payload": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "user": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "username": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "username",
+            "email"
+          ]
+        },
+        "orderItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/order_item_payload"
+          }
+        },
+        "orderTotal": {
+          "type": "number",
+          "format": "float"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "user",
+        "orderItems",
+        "orderTotal",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "order_list_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "orders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/order_payload"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "orders",
+        "count",
+        "page",
+        "pageCount",
+        "pageSize"
+      ]
+    },
+    "order_object_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "order": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "user": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "username",
+                "email"
+              ]
+            },
+            "orderItems": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/order_item_payload"
+              }
+            },
+            "orderTotal": {
+              "type": "number",
+              "format": "float"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updatedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": [
+            "id",
+            "user",
+            "orderItems",
+            "orderTotal",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "order"
+      ]
+    },
+    "user_payload": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "last_login_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "last_login_at",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "user_list_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "users": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/user_payload"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "users",
+        "count",
+        "page",
+        "pageCount",
+        "pageSize"
+      ]
+    },
+    "user_object_response": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "user": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "last_login_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updatedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": [
+            "id",
+            "firstName",
+            "lastName",
+            "email",
+            "last_login_at",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      },
+      "required": [
+        "successful",
+        "status",
+        "statusCode",
+        "user"
+      ]
+    }
   }
 }
